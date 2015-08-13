@@ -1,0 +1,246 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\0000325}}
+html {
+  min-height: 100%; }
+
+@keyframes animatedBackground {
+  from {
+    background-position: 100% 100%; }
+  to {
+    background-position: 0% 0%; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\0000334}}
+body {
+  background-image: url(../images/rain2.svg);
+  background-size: cover;
+  background-color: #ededed;
+  animation: animatedBackground 40s;
+  animation-iteration-count: infinite;
+  color: #456;
+  font-family: "museo-sans", Helvetica, Arial;
+  font-weight: 300;
+  font-size: 15px;
+  min-height: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\0000350}}
+body:after {
+  background-color: rgba(255, 255, 255, 0.7);
+  min-height: 100%;
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\0000369}}
+select, option {
+  font-family: "museo-sans", Helvetica, Arial;
+  font-size: 14px;
+  padding: 5px;
+  background: #fcfcfc;
+  color: #333; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\0000377}}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\0000381}}
+h1 {
+  color: #e60072;
+  font-weight: 600; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\0000386}}
+h3 {
+  color: #e60072; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\0000390}}
+.brandcolor {
+  color: #F2AC17; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\0000394}}
+a {
+  font-weight: 600;
+  color: grey; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\0000397}}
+  a:hover {
+    color: #F2AC17;
+    text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003103}}
+.plot {
+  color: grey; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003105}}
+  .plot:hover {
+    color: #456;
+    text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003113}}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #666; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003119}}
+.y.axis path {
+  stroke: #1a3a4a;
+  stroke-width: 0.5px;
+  fill: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003125}}
+.x.axis path {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003129}}
+.above {
+  background-color: #2095A6;
+  fill: #2095A6;
+  opacity: 0.7;
+  color: #2095A6; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003136}}
+.below {
+  background-color: #FF6673;
+  fill: #FF6673;
+  opacity: 0.7;
+  color: #FF6673; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003143}}
+.above.text, .below.text {
+  background-color: inherit;
+  opacity: 1.0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003148}}
+.line {
+  fill: none;
+  stroke: #ccc; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003153}}
+.line.actuals {
+  stroke-width: 1px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003157}}
+.line.normals {
+  stroke: #ccc;
+  stroke-width: 0.5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003162}}
+.tick line {
+  stroke: #ccc;
+  stroke-width: 1px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003168}}
+.graph text {
+  fill: #999999; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003174}}
+div.map path {
+  fill: #07090a;
+  stroke: #ccc;
+  stroke-width: 2px;
+  opacity: 0.3; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003180}}
+div.map circle.station {
+  fill: #333;
+  stroke: #fff;
+  stroke-width: 1.5px;
+  opacity: 0.9;
+  cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003186}}
+  div.map circle.station:hover {
+    fill: #ccc; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003190}}
+div.map circle.station.highlight {
+  fill: #3f3; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003195}}
+div.options {
+  float: right; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003199}}
+span.legend {
+  margin-left: 20px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003203}}
+.legend.actual {
+  font-weight: 500;
+  color: #456; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003208}}
+.legend.above, .legend.below {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003214}}
+div.options input {
+  margin-left: 30px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003218}}
+.viz-label {
+  text-align: left;
+  color: #999999; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003229}}
+.row {
+  margin-bottom: 20px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/main\.scss}line{font-family:\00003236}}
+.btn {
+  border-radius: 0;
+  border: 0;
+  text-decoration: none; }
+
+/*Tabs*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/_common\.scss}line{font-family:\000033}}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover {
+  background-color: grey; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/_common\.scss}line{font-family:\0000311}}
+ul li {
+  display: inline;
+  background-color: #456; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/_common\.scss}line{font-family:\0000316}}
+.nav-pills > li + li {
+  margin-left: 5px;
+  margin-bottom: 5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/_common\.scss}line{font-family:\0000321}}
+.nav-pills > ul li a {
+  color: #fff; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/_common\.scss}line{font-family:\0000325}}
+.nav-pills > li > a {
+  border-radius: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/_common\.scss}line{font-family:\0000329}}
+.nav-pills > ul li:hover {
+  border-radius: 0;
+  background-color: grey;
+  text-decoration: none;
+  color: #fff; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/_common\.scss}line{font-family:\0000336}}
+.nav-pills > ul li:focus {
+  background-color: grey;
+  color: #fff; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/_common\.scss}line{font-family:\0000341}}
+ul li a:hover, ul li a:focus {
+  text-decoration: none;
+  color: #E60072;
+  background-color: grey; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/_common\.scss}line{font-family:\0000347}}
+ul li:focus {
+  background-color: grey; }
+
+@media screen and (max-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/_mobile\.scss}line{font-family:\000033}}
+  h2 {
+    font-size: 20px; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/_annual\.scss}line{font-family:\000031}}
+body {
+  background-image: none; }

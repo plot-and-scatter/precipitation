@@ -1,0 +1,26 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/difference\.scss}line{font-family:\0000325}}
+html {
+  min-height: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/difference\.scss}line{font-family:\0000329}}
+.bar {
+  margin-top: 5%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/difference\.scss}line{font-family:\0000333}}
+.bar.positive {
+  fill: #2095A6; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/difference\.scss}line{font-family:\0000337}}
+.bar.negative {
+  fill: #FF6673; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/difference\.scss}line{font-family:\0000341}}
+.axis text {
+  font: 10px sans-serif; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/geege\/Dropbox\/dev\/plot-and-scatter\/R_precipitation\/assets\/css\/difference\.scss}line{font-family:\0000345}}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges; }

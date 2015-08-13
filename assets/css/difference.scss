@@ -1,0 +1,50 @@
+$base-font: "museo-sans", Helvetica, Arial;
+$base-font-weight: 300;
+$bold-font-weight: 600;
+$base-font-size: 15px;
+
+$header-font-weight: 100;
+
+$base-color: #586F7C;
+$ps-brand-color: #F2AC17;
+$base-color: #456;
+$base-grey-color: #666;
+$berry-color: #e60072;
+$link-color: darken($base-color, 30%);
+//$link-color: lighten($ps-brand-color, 30%);
+//$link-color: lighten($base-color, 35%);
+
+
+//$above-color: #f33;
+//$below-color: #6f6;
+$above-color: #2095A6;
+$below-color: #FF6673;
+
+
+
+html {
+  min-height: 100%;
+}
+
+.bar {
+  margin-top: 5%;
+}
+
+.bar.positive {
+  fill: $above-color;
+}
+
+.bar.negative {
+  fill: $below-color;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
