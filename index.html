@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>British Columbia Precipitation, 2010–2014</title>
+  
+  <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+  <script src="//use.typekit.net/kqk3lzp.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+<div class="row">
+
+  <div class="col-sm-8 col-sm-offset-2">
+
+    <h1>British Columbia Precipitation, Normals vs Actuals, 2010–2014</h1>
+
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-sm-5">
+
+    <div class="map"></div>
+
+  </div>
+
+  <div class="col-sm-7">
+
+    <div class="station_select">
+      <label>Weather station:</label> <select id="weather_station" name="weather_station"></select>
+    </div>
+
+    <div class="graph"></div>
+
+    <div class="options">
+      <span class="legend actual">—</span> Actual 
+      <span class="legend below">&nbsp;</span> Below normal
+      <span class="legend above">&nbsp;</span> Above normal
+      <input type="checkbox" id="lock_y"> <label for="lock_y">Lock Y-axis</label>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-sm-2 col-sm-offset-1 viz-label">
+
+  Overview
+
+  </div>
+
+  <div class="col-sm-6 viz-description">
+
+    <p>This visualization shows monthly precipitation recorded at British Columbia weather stations from 2010 through 2014, inclusive. Note that the line on the graph has been <a href="https://en.wikipedia.org/wiki/B-spline">interpolated</a> using D3.</p>
+
+    <p>The actual precipitation data is compared with the historical normal precipitation for that weather station, as recorded in the period 1980 &ndash; 2010.</p>
+
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-sm-2 col-sm-offset-1 viz-label">
+
+  Usage notes
+
+  </div>
+
+  <div class="col-sm-6 viz-description">
+
+    <p>To more easily compare precipitation across different weather stations, check the <strong>Lock Y-axis</strong> checkbox. Uncheck it to scale the Y-axis based on the precipitation at each station.</p>
+
+    <p><strong><span class="above text">Blue areas</span></strong> represent amounts of precipitation above seasonal normals. <strong><span class="below text">Red areas</span></strong> represent periods of below-average precipitation.</p>
+
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-sm-2 col-sm-offset-1 viz-label">
+
+  Methodology
+
+  </div>
+
+  <div class="col-sm-6 viz-description">
+
+    <p>The historical and actual precipitation data were downloaded from Environment Canada (links below).</p>
+
+    <p>The stations were selected by first collecting those appearing with an asterisk in <a href="http://climate.weather.gc.ca/climate_normals/stnselect_1981_2010_e.html?lang=e&province=BC&provSubmit=go">this list</a> of BC weather stations. (An asterisk indicates a station meets <a href="http://climate.weather.gc.ca/climate_normals/normals_documentation_e.html?docID=1981">UN WMO</a> standards.) Actual daily historical data for these stations were then downloaded and collated by month.</p>
+
+    <p>In some cases, weather stations with identical names have been &ldquo;replaced&rdquo; in the Environment Canada data; for example, examine the effective dates for &ldquo;Abbotsford A&rdquo; in <a href="http://climate.weather.gc.ca/advanceSearch/searchHistoricDataStations_e.html?searchType=stnProv&timeframe=1&lstProvince=BC&optLimit=yearRange&StartYear=2010&EndYear=2015&Year=2015&Month=5&Day=27&selRowPerPage=100&cmdProvSubmit=Search">this list</a>. In these cases, data files were stitched together to ensure continuous data.</p>
+
+    <p>In other cases, the data for a station were insufficiently complete; any stations with more than 10 days missing in a single month were rejected.</p>
+
+    <p>The historical and normal data for remaining stations were compiled into a single CSV file, which forms the basis for the visualization.</p>
+
+  </div>
+
+</div>
+
+
+<div class="row">
+
+  <div class="col-sm-2 col-sm-offset-1 viz-label">
+
+  Resources
+
+  </div>
+
+  <div class="col-sm-6 viz-description">
+
+    <p>The BC geometry shapefile is adapted from <a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/">Natural Earth's set of states and provinces</a>, transformed using <a href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a> and <a href="https://github.com/mbostock/topojson">topojson</a>. For an introduction to these tools (and mapping with D3), see <a href="http://bost.ocks.org/mike/map/">Let's Make a Map</a>.</p>
+
+    <p>Weather data from <a href="http://climate.weather.gc.ca">Environment Canada</a>: <a href="http://climate.weather.gc.ca/advanceSearch/searchHistoricDataStations_e.html?searchType=stnProv&timeframe=1&lstProvince=BC&optLimit=yearRange&StartYear=2010&EndYear=2015&Year=2015&Month=5&Day=27&selRowPerPage=100&cmdProvSubmit=Search">actuals</a> and <a href="http://climate.weather.gc.ca/climate_normals/stnselect_1981_2010_e.html?lang=e&province=BC&provSubmit=go">normals</a>.</p>
+
+    <p>Built with <a href="http://d3js.org">D3</a>, <a href="https://github.com/mbostock/topojson">topojson</a>, and <a href="http://getbootstrap.com">Bootstrap</a>.</p>
+
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-sm-2 col-sm-offset-1 viz-label">
+
+  Contact
+
+  </div>
+
+  <div class="col-sm-6 viz-description">
+
+    <p>We'd be happy to hear your feedback. Please e-mail Frank Hangler at <a href="mailto:frank@plotandscatter.com">frank@plotandscatter.com</a>.</p>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="assets/js/d3.min.js"></script>
+<script src="assets/js/topojson.js"></script>
+<script src="assets/js/helpers.js"></script>
+<!--<script src="assets/bootstrap/js/bootstrap.min.js"></script>-->
+
+<script>
+
+var margin = {top: 10, right: 0, bottom: 20, left: 40},
+    width = parseInt(d3.select(".graph").style("width")),
+    width = width - margin.left - margin.right,
+    graphRatio = 0.45,
+    height = width * graphRatio,
+    map_width = parseInt(d3.select(".map").style("width")),
+    map_height = map_width * MAP_RATIO;
+
+var DATA;
+
+var DURATION = 400;
+
+var SCALE_FACTOR = 4.25;
+var MAP_RATIO = 0.95;
+
+var parseDate = d3.time.format("%Y-%m").parse;
+
+var station = "ABBOTSFORD A";
+
+var x = d3.time.scale()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom")
+    .ticks(6);
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var actualsLine = d3.svg.area()
+    .interpolate("basis")
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d[station]); });
+
+var normalsLine = d3.svg.area()
+    .interpolate("basis")
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d[station + " NORMALS"]); });    
+
+var area = d3.svg.area()
+    .interpolate("basis")
+    .x(function(d) { return x(d.date); })
+    .y1(function(d) { return y(d[station]); });
+
+var graph = d3.select("div.graph").append("svg")
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.select("input#lock_y").on("click", function() { drawGraph(DURATION); });
+
+var select = d3.select("select#weather_station").on("change", changeSelect);
+var options = select.selectAll("option");
+
+var map = d3.select("div.map").append("svg").attr("width", width).attr("height", height);
+
+var projection = d3.geo.conicConformal()
+    .center([0, 54.6])
+    .rotate([122.4, 0, -1.5])
+    .parallels([49, 77])
+    .scale(width * SCALE_FACTOR)
+    .translate([map_width / 2, map_height / 2]);
+
+var path = d3.geo.path().projection(projection);
+
+d3.csv("data/draft-data-transposed.csv", function(error, csvData) {
+  csvData.forEach(function(d) {
+    d.date = parseDate(d.date);
+    for (key in d) {
+      d[key] = +d[key];
+    }
+  });
+
+  DATA = csvData;
+
+  d3.json("data/province/bc.json", function(error, bc) {
+    if (error) return console.error(error);
+
+    map.append("path")
+        .datum(topojson.feature(bc, bc.objects.provinces));
+
+    map.selectAll(".station")
+        .data(topojson.feature(bc, bc.objects.stations).features)
+        .enter().append("circle")
+          .attr("class", "station")
+          .attr("r", getCircleRadius(map_width))
+          .attr("data-name", function(d) { return d.properties.station_name; })
+          .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+          .on("click", function(d) { clickCircle(d.properties.station_name); })
+          .append("title")
+            .text(function(d) { return prettyStationName(d.properties.station_name); });
+
+    resize();
+
+  });
+
+  drawSelect();
+
+
+  // TODO: calculate area between curves
+  // http://tutorial.math.lamar.edu/Classes/CalcI/AreaBetweenCurves.aspx
+
+});
+
+
+
+d3.select(window).on('resize', resize);
+
+function resize() {
+    width = parseInt(d3.select('.graph').style('width'));
+
+    leftPadding = parseInt(d3.select('.graph').style('padding-left'));
+    rightPadding = parseInt(d3.select('.graph').style('padding-right'));
+
+    width = width - margin.left - leftPadding - margin.right - rightPadding;
+    height = width * graphRatio + margin.bottom + margin.top;
+
+    d3.select(graph.node().parentNode)
+      .style('height', (height + margin.top + margin.bottom) + 'px')
+      .style('width', (width + margin.left + margin.right) + 'px');
+
+    x.range([0, width]);
+    y.range([height, 0]);
+
+    drawGraph(0);
+
+    map_width = parseInt(d3.select(".map").style('width'));
+    map_height = map_width * MAP_RATIO;
+
+    map.style("width", map_width + "px");
+    map.style("height", map_height + "px");
+
+    projection.translate([map_width / 2, map_height / 2]).scale(map_width * SCALE_FACTOR);
+
+    map.selectAll("path").attr("d", path);
+    map.selectAll("circle")
+      .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+      .attr("r", getCircleRadius(map_width));
+}
+
+</script>
+
+</body>
+
+</html>

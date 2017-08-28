@@ -1,75 +1,43 @@
-$base-font: "museo-sans", Helvetica, Arial;
+$base-font: "museo-sans";
 $base-font-weight: 300;
 $bold-font-weight: 600;
 $base-font-size: 15px;
 
 $header-font-weight: 100;
 
-$base-color: #586F7C;
+//$base-color: #586F7C;
 $ps-brand-color: #F2AC17;
 $base-color: #456;
 $base-grey-color: #666;
-$berry-color: #e60072;
-$link-color: darken($base-color, 30%);
+$background-color: darken($base-color, 30%);
 //$link-color: lighten($ps-brand-color, 30%);
-//$link-color: lighten($base-color, 35%);
+$link-color: lighten($base-color, 35%);
 
 
 //$above-color: #f33;
 //$below-color: #6f6;
-$above-color: #2095A6;
-$below-color: #FF6673;
-
-
+$above-color: #69f;
+$below-color: #f66;
 
 html {
-  min-height: 100%;
-}
-
-@keyframes animatedBackground {
-	from { background-position: 100% 100%; }
-	to { background-position: 0% 0%; }
+  height: 100%;
+  background-color: $background-color;
 }
 
 body {
-  //background: linear-gradient($base-color, $background-color);
-  //background-color: #fff;
-  background-image: url(../images/rain2.svg); 
-  background-size: cover;
-  background-color: rgb(237,237,237);
-  animation: animatedBackground 40s;
-  animation-iteration-count: infinite;
-  color: $base-color;
+  background: linear-gradient($base-color, $background-color);
+  background-color: $background-color;
+  color: #fff;
   font-family: $base-font;
   font-weight: $base-font-weight;
   font-size: $base-font-size;
   min-height: 100%;
-  
 }
-
-body:after {
-  background-color: rgba(255,255,255,0.7);
-  //margin: 2% 5% 5% 0%;
-  min-height: 100%;
-  position: fixed;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  //background-size: cover;
- // -webkit-background-size: cover;
-  //-moz-background-size: cover;
- // -o-background-size: cover;
-  
-}
-
 
 select, option {
   font-family: $base-font;
   font-size: 14px;
-  padding: 5px;
+  padding: 10px;
   background: lighten($base-grey-color, 59%);
   color: #333;
 }
@@ -78,42 +46,19 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $header-font-weight;
 }
 
-h1 {
- color: $berry-color;
- font-weight: $bold-font-weight;
-}
-
-h3{
-  color: $berry-color;
-}
-
-.brandcolor {
-  color: $ps-brand-color;
-}
-
 a {
   font-weight: $bold-font-weight;
-  color: grey;
+  text-decoration: underline;
+  color: $link-color;
   &:hover {
     color: $ps-brand-color;
-    text-decoration: none;
   }
 }
-
-.plot {
-  color: grey;
-  &:hover {
-    color: #456;
-    text-decoration: none;
-  }
-}
-
-
 
 .axis path,
 .axis line {
   fill: none;
-  stroke: $base-grey-color;
+  stroke: #fff;
 }
 
 .y.axis path {
@@ -147,7 +92,7 @@ a {
 
 .line {
   fill: none;
-  stroke: #ccc;
+  stroke: #fff;
 }
 
 .line.actuals {
@@ -160,13 +105,12 @@ a {
 }
 
 .tick line {
-  stroke: #ccc;
+  stroke: darken($base-color, 15%);
   stroke-width: 1px;
 }
 
-
 .graph text {
-  fill: lighten($base-grey-color, 20%);
+  fill: #fff;
 
 }
 
@@ -202,7 +146,7 @@ span.legend {
 
 .legend.actual {
   font-weight: 500;
-  color: $base-color;
+  color: #fff;
 }
 
 .legend.above, .legend.below {
@@ -216,10 +160,10 @@ div.options input {
 }
 
 .viz-label {
-  text-align: left;
+  text-align: right;
   //text-transform: uppercase;
   //font-size: $base-font-size * 0.9;
-  color: lighten($base-grey-color, 20%); 
+  color: lighten($base-grey-color, 20%);
 }
 
 .viz-description {
@@ -232,15 +176,8 @@ div.options input {
   //border-top: solid $base-color 1px;
 }
 
-
 .btn {
   border-radius: 0;
   border: 0;
   text-decoration: none;
 }
-
-@import
-  "common",
-  "mobile",
-  "annual";
-;
